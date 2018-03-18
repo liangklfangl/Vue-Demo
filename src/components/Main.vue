@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>
+        <p class="navigator">
             <router-link to="/ref">学习ref</router-link>
             <router-link to="/on">学习on</router-link>
             <router-link to="/slot">学习slot</router-link>
@@ -24,5 +24,14 @@ export default {
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+}
+.navigator{
+    text-align: center;
+}
+.navigator >a {
+    display: inline-block;
+    text-decoration: none;
+    margin-left:10px;
+    border:1px solid #ccc;
 }
 </style>
