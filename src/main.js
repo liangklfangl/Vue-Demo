@@ -103,6 +103,17 @@ Vue.component("my-checkbox", {
   }
 });
 
+// 添加v-child组件
+Vue.component("c-child", {
+  props: ["target"],
+  mounted() {
+    this.target(function(t){
+      console.log('子组件调用了父组件的this.target方法',t);
+    });
+  },
+  template: "<div>我是c-child组件</div>"
+});
+
 new Vue({
   router,
   render: h => h(Layout)
