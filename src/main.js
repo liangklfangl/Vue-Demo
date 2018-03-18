@@ -107,6 +107,7 @@ Vue.component("my-checkbox", {
 Vue.component("c-child", {
   props: ["target"],
   mounted() {
+    // this.target会或获取到父组件的一个实例
     this.target(function(t){
       console.log('子组件调用了父组件的this.target方法',t);
     });
